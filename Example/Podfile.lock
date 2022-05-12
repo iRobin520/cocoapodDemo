@@ -1,0 +1,29 @@
+PODS:
+  - Alamofire (5.6.1)
+  - iOSCTLibKit (0.1.0):
+    - iOSCTLibKit/iOSCTLibKit (= 0.1.0)
+  - iOSCTLibKit/iOSCTLibKit (0.1.0):
+    - Alamofire
+    - RxSwift
+  - RxSwift (6.5.0)
+
+DEPENDENCIES:
+  - iOSCTLibKit (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - RxSwift
+
+EXTERNAL SOURCES:
+  iOSCTLibKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  iOSCTLibKit: db7a687b71aa3af0adaa1a6b7318d62d5963b470
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+
+PODFILE CHECKSUM: 2f9f8c0b7f8daaf3c9891ab833aa50100396bfe8
+
+COCOAPODS: 1.11.3
