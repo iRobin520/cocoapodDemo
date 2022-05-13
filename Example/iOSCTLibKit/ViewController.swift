@@ -7,16 +7,29 @@
 //
 
 import UIKit
+import RxSwift
 import iOSCTLibKit
 
 class ViewController: UIViewController {
-
+    let helloWorld = HelloWorld()
+    let bag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let result = HelloWorld().sayHi()
+        let result = helloWorld.sayHi()
         print(result);
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        print("-------------fetching task-------------")
+        helloWorld.getTodoTask().subscribe(onNext: {[weak self](task) in
+            print("-------------fetched task:-------------")
+            print(task)
+        }, onError: { error in
+            print("-------------fetch task failed:-------------")
+            print(error)
+        }, onCompleted: {[weak self] in
+            print("-------------fetch task completed-------------")
+        }).disposed(by: bag)
     }
 
     override func didReceiveMemoryWarning() {
